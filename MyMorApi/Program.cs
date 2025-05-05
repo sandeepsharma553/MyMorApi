@@ -1,8 +1,25 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using MyMorApi.Context;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<dbContext>(options =>
+{
+    //options.UseNpgsql(builder.Configuration.GetConnectionString("ConStr"), x => x.SetPostgresVersion(15, 3));
+    //options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+});
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(name: "CorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+builder.Services.AddCors();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "SPIRE ESSENTIAL (Basic System)", Version = "v1" });
@@ -41,6 +58,21 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
    
 }
+builder.Services.AddDbContext<dbContext>(options =>
+{
+    //options.UseNpgsql(builder.Configuration.GetConnectionString("ConStr"), x => x.SetPostgresVersion(15, 3));
+    //options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+});
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(name: "CorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+builder.Services.AddCors();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
