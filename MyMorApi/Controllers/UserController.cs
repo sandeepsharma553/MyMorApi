@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MyMorApi.DBModel;
 using MyMorApi.Interface;
+using MyMorApi.Models;
 
 namespace MyMorApi.Controllers
 {
@@ -16,10 +17,10 @@ namespace MyMorApi.Controllers
 
         }
         [HttpPost]
-        [Route("Login")]
-        public async Task<IActionResult> Login(Login user)
+        [Route("Signup")]
+        public async Task<IActionResult> Signup(UserModel user)
         {
-            var result = await _service.Login(user);
+            var result = await _service.Signup(user);
             if (result != null)
             {
                 return Ok(result);

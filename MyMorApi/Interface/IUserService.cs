@@ -5,6 +5,6 @@ namespace MyMorApi.Interface
 {
     public interface IUserService
     {
-        public Task<ResponseModel<Login>> Login(Login user);
+        public Task<ResponseModel<UserModel>> Signup(UserModel user);
     }
 }

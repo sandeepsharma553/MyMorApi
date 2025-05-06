@@ -14,25 +14,27 @@ namespace MyMorApi.Service
             _context = context;
         }
 
-        public async Task<ResponseModel<Login>> Login(Login user)
+        public async Task<ResponseModel<UserModel>> Signup(UserModel user)
         {
-            ResponseModel<Login> response = new ResponseModel<Login>();
+            ResponseModel<UserModel> response = new ResponseModel<UserModel>();
             try
             {
-                Login model = await _context.Login.Where(x => x.LoginID == user.LoginID && x.Password == user.Password).FirstOrDefaultAsync();
-                if (model != null)
+                var res = await _context.User.Where(x => x.EmailID == user.EmailID).FirstOrDefaultAsync();
+                if (res == null)
                 {
                     response.IsSuccess = true;
-                    response.Data = model;
+                    response.Message = "User created successfully";
                 }
                 else
                 {
                     response.IsSuccess = false;
+                    response.Message = "User already exist";
                 }
             }
             catch (Exception ex)
             {
                 response.IsSuccess = false;
+                response.Message = "something went wrong";
 
             }
             return response;
