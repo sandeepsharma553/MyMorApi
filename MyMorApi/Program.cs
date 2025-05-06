@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddDbContext<dbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConStr"));

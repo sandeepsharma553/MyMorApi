@@ -17,7 +17,7 @@ namespace MyMorApi.Configuration
                     UniversityID = 1,
                     Name = "Demo",
                     CreatedBy = 1,
-                    CreatedDate = new DateTime(DateTime.Today.Year, 01, 01, 0, 0, 0, DateTimeKind.Utc)
+                    CreatedDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 0, 0, 0, DateTimeKind.Utc)
                 }
             );
         }

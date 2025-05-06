@@ -60,7 +60,7 @@ namespace MyMorApi.Migrations
                         {
                             ID = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedDate = new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc),
                             Name = "Demo",
                             UniversityID = 1,
                             UpdatedBy = 0,
@@ -113,8 +113,8 @@ namespace MyMorApi.Migrations
                         {
                             ID = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            LoginID = "Admin",
+                            CreatedDate = new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LoginID = "admin@gmail.com",
                             Password = "12345",
                             Status = 1,
                             UpdatedBy = 0,
@@ -156,7 +156,7 @@ namespace MyMorApi.Migrations
                         {
                             ID = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedDate = new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc),
                             Name = "Admin",
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -196,7 +196,7 @@ namespace MyMorApi.Migrations
                         {
                             ID = 1,
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedDate = new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc),
                             Name = "Demo",
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -275,7 +275,7 @@ namespace MyMorApi.Migrations
                             ID = 1,
                             Address = "Botswana",
                             CreatedBy = 1,
-                            CreatedDate = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedDate = new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc),
                             EmailID = "admin@gmail.com",
                             FirstName = "Admin",
                             HostelID = 1,

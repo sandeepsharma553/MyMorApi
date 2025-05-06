@@ -142,27 +142,27 @@ namespace MyMorApi.Migrations
             migrationBuilder.InsertData(
                 table: "Role",
                 columns: new[] { "ID", "CreatedBy", "CreatedDate", "Name", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, 1, new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc), "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "University",
                 columns: new[] { "ID", "CreatedBy", "CreatedDate", "Name", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "Demo", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, 1, new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc), "Demo", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Hostel",
                 columns: new[] { "ID", "CreatedBy", "CreatedDate", "Name", "UniversityID", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "Demo", 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, 1, new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc), "Demo", 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "ID", "Address", "CreatedBy", "CreatedDate", "EmailID", "FirstName", "HostelID", "LastName", "MobileNo", "RoleID", "Status", "UniversityID", "UpdatedBy", "UpdatedDate", "UserName" },
-                values: new object[] { 1, "Botswana", 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "admin@gmail.com", "Admin", 1, "", "987654321", 1, 1, 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "" });
+                values: new object[] { 1, "Botswana", 1, new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc), "admin@gmail.com", "Admin", 1, "", "987654321", 1, 1, 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "" });
 
             migrationBuilder.InsertData(
                 table: "Login",
                 columns: new[] { "ID", "CreatedBy", "CreatedDate", "LoginID", "Password", "Status", "UpdatedBy", "UpdatedDate", "UserID" },
-                values: new object[] { 1, 1, new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "Admin", "12345", 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1 });
+                values: new object[] { 1, 1, new DateTime(2025, 5, 6, 0, 0, 0, 0, DateTimeKind.Utc), "admin@gmail.com", "12345", 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Hostel_UniversityID",
