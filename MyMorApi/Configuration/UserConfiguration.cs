@@ -13,15 +13,19 @@ namespace MyMorApi.Configuration
             (
                 new User
                 {
-                    PKUserID = 1,
+                    ID = 1,
                     FirstName = "Admin",
                     LastName = "",
                     MobileNo = "987654321",
                     EmailID = "admin@gmail.com",
-                    FKRoleID = 1,
+                    Address = "Botswana",
+                    UserName="",
+                    RoleID = 1,
+                    UniversityID=1,
+                    HostelID= 1,
                     Status = 1,
                     CreatedBy = 1,
-                    CreatedDate = DateTime.Now
+                    CreatedDate = new DateTime(DateTime.Today.Year, 01, 01, 0, 0, 0, DateTimeKind.Utc)
                 }
             );
         }

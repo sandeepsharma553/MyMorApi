@@ -1,14 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using MyMorApi.Context;
+using MyMorApi.Interface;
+using MyMorApi.Service;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddDbContext<dbContext>(options =>
 {
-    //options.UseNpgsql(builder.Configuration.GetConnectionString("ConStr"), x => x.SetPostgresVersion(15, 3));
-    //options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConStr"));
 });
 builder.Services.AddCors(opt =>
 {
@@ -22,7 +24,7 @@ builder.Services.AddCors(opt =>
 builder.Services.AddCors();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "SPIRE ESSENTIAL (Basic System)", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyMor (Basic System)", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme (Example: 'Bearer 12345abcdef')",
@@ -58,21 +60,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
    
 }
-builder.Services.AddDbContext<dbContext>(options =>
-{
-    //options.UseNpgsql(builder.Configuration.GetConnectionString("ConStr"), x => x.SetPostgresVersion(15, 3));
-    //options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-});
-builder.Services.AddCors(opt =>
-{
-    opt.AddPolicy(name: "CorsPolicy", builder =>
-    {
-        builder.AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
-    });
-});
-builder.Services.AddCors();
+
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
