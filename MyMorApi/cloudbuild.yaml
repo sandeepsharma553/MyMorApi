@@ -1,0 +1,6 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/mymor-one-458613/mymorapi', './']
+
+images:
+  - 'gcr.io/mymor-one-458613/mymorapi'
