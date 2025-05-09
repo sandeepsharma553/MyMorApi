@@ -3,21 +3,21 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyMorApi.DBModel
 {
-    public class Hostel
+    public class CleaningSchedule
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        public int UniversityID { get; set; }
-        public string Name { get; set; }
+        public int HostelID { get; set; }
+        public string RoomType { get; set; }
+        public string DayOfWeek { get; set; }
+        public DateTime CleaningDate { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
         public int CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public int UpdatedBy { get; set; }
         public DateTime UpdatedDate { get; set; }
-        public University University { get; set; }
-        public ICollection<User> Users { get; set; }
-        public ICollection<DiningMenuItem> DiningMenuItem { get; set; }
-        public ICollection<CleaningSchedule> CleaningSchedule { get; set; }
-        public ICollection<Maintenance> Maintenance { get; set; }
+        public Hostel Hostel { get; set; }
     }
 }

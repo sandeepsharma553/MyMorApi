@@ -15,5 +15,7 @@ namespace MyMorApi.DBModel
         public DateTime UpdatedDate { get; set; }
         public ICollection<User> Users { get; set; }
         public ICollection<Hostel> Hostels { get; set; }
+        public ICollection<Event> Events { get; set; }
+        public ICollection<Announcement> Announcements { get; set; }
     }
 }

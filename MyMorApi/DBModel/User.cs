@@ -25,5 +25,8 @@ namespace MyMorApi.DBModel
         public University University { get; set; }
         public Hostel Hostel { get; set; }
         public ICollection<Login> Logins { get; set; }
+        public ICollection<BookingRoom> BookingRoom { get; set; }
+        public ICollection<Report> Report { get; set; }
+        public ICollection<UserQiPoint> UserQiPoint { get; set; }
     }
 }
