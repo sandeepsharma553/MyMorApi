@@ -9,6 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
+builder.Services.AddScoped<IBookingRoomService, BookingRoomService>();
+builder.Services.AddScoped<ICleaningScheduleService, CleaningScheduleService>();
+builder.Services.AddScoped<IDiningMenuService, DiningMenuService>();
+builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<IMaintenanceService, MaintenanceService>();
+builder.Services.AddScoped<IReportService, ReportService>();
 
 builder.Services.AddDbContext<dbContext>(options =>
 {
