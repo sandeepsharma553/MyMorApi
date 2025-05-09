@@ -1,4 +1,5 @@
-﻿using MyMorApi.Context;
+﻿using MyMorApi.Common;
+using MyMorApi.Context;
 using MyMorApi.Interface;
 using MyMorApi.Model;
 using MyMorApi.Models;
@@ -12,24 +13,112 @@ namespace MyMorApi.Service
         {
             _context = context;
         }
-        public Task<ResponseModel<EventModel>> Create(EventModel model)
+        public async Task<ResponseModel<EventModel>> Create(EventModel model)
         {
-            throw new NotImplementedException();
+            ResponseModel<EventModel> response = new ResponseModel<EventModel>();
+            try
+            {
+                //var res = await null;
+                //if (res == null)
+                //{
+                response.IsSuccess = true;
+                response.Message = "created successfully";
+                //}
+                //else
+                //{
+                //    response.IsSuccess = false;
+                //    response.Message = "User already exist";
+                //}
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Error : " + "Something went wrong. Please contact Admin";
+                ExceptionLogger.LogError("Announcement_Create", ex);
+
+            }
+            return response;
         }
 
-        public Task<ResponseModel<EventModel>> Delete(EventModel model)
+        public async Task<ResponseModel<EventModel>> Delete(EventModel model)
         {
-            throw new NotImplementedException();
+            ResponseModel<EventModel> response = new ResponseModel<EventModel>();
+            try
+            {
+                //var res = await null;
+                //if (res == null)
+                //{
+                response.IsSuccess = true;
+                response.Message = "created successfully";
+                //}
+                //else
+                //{
+                //    response.IsSuccess = false;
+                //    response.Message = "User already exist";
+                //}
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Error : " + "Something went wrong. Please contact Admin";
+                ExceptionLogger.LogError("Announcement_Create", ex);
+
+            }
+            return response;
         }
 
-        public Task<ResponseModel<EventModel>> Get(EventModel model)
+        public async Task<ResponseModel<EventModel>> Get(EventModel model)
         {
-            throw new NotImplementedException();
+            ResponseModel<EventModel> response = new ResponseModel<EventModel>();
+            try
+            {
+                //var res = await null;
+                //if (res == null)
+                //{
+                response.IsSuccess = true;
+                response.Message = "created successfully";
+                //}
+                //else
+                //{
+                //    response.IsSuccess = false;
+                //    response.Message = "User already exist";
+                //}
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Error : " + "Something went wrong. Please contact Admin";
+                ExceptionLogger.LogError("Announcement_Create", ex);
+
+            }
+            return response;
         }
 
-        public Task<ResponseModel<EventModel>> Update(EventModel model)
+        public async Task<ResponseModel<EventModel>> Update(EventModel model)
         {
-            throw new NotImplementedException();
+            ResponseModel<EventModel> response = new ResponseModel<EventModel>();
+            try
+            {
+                //var res = await null;
+                //if (res == null)
+                //{
+                response.IsSuccess = true;
+                response.Message = "created successfully";
+                //}
+                //else
+                //{
+                //    response.IsSuccess = false;
+                //    response.Message = "User already exist";
+                //}
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Error : " + "Something went wrong. Please contact Admin";
+                ExceptionLogger.LogError("Announcement_Create", ex);
+
+            }
+            return response;
         }
     }
 }
