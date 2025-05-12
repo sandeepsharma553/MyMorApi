@@ -6,5 +6,6 @@ namespace MyMorApi.Interface
     public interface IAuthService
     {
         public Task<ResponseModel<UserModel>> Login(LoginModel login);
+        Task<ResponseModel<UserModel>> VerifyEmail(UserModel model);
     }
 }

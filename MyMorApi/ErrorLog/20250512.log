@@ -1,0 +1,15 @@
+120525 11:16:43 Login_SendMail	534: 5.7.9 Application-specific password required. For more information, go to
+5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 98e67ed59e1d1-30ad4d2f1dasm8154858a91.17 - gsmtp	MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Application-specific password required. For more information, go to
+5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 98e67ed59e1d1-30ad4d2f1dasm8154858a91.17 - gsmtp	MailKit	   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MyMorApi.Common.SendMail.SendVerificationEmailAsync(String toEmail, String verificationCode) in G:\MyData\MyMor\MyMorApi\MyMorApi\Common\SendMail.cs:line 25
+   at MyMorApi.Service.AuthService.VerifyEmail(UserModel model) in G:\MyData\MyMor\MyMorApi\MyMorApi\Service\AuthService.cs:line 80
+120525 11:21:33 Login_SendMail	534: 5.7.9 Application-specific password required. For more information, go to
+5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor d9443c01a7336-22fc773e7f8sm54975745ad.60 - gsmtp	MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Application-specific password required. For more information, go to
+5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor d9443c01a7336-22fc773e7f8sm54975745ad.60 - gsmtp	MailKit	   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MyMorApi.Common.SendMail.SendVerificationEmailAsync(String toEmail, String verificationCode) in G:\MyData\MyMor\MyMorApi\MyMorApi\Common\SendMail.cs:line 25
+   at MyMorApi.Service.AuthService.VerifyEmail(UserModel model) in G:\MyData\MyMor\MyMorApi\MyMorApi\Service\AuthService.cs:line 80
+120525 11:24:34 Login_SendMail	534: 5.7.9 Application-specific password required. For more information, go to
+5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 41be03b00d2f7-b2349dd34edsm4875234a12.30 - gsmtp	MailKit.Net.Smtp.SmtpCommandException: 5.7.9 Application-specific password required. For more information, go to
+5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 41be03b00d2f7-b2349dd34edsm4875234a12.30 - gsmtp	MailKit	   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MyMorApi.Common.SendMail.SendVerificationEmailAsync(String toEmail, String verificationCode) in G:\MyData\MyMor\MyMorApi\MyMorApi\Common\SendMail.cs:line 25
+   at MyMorApi.Service.AuthService.VerifyEmail(UserModel model) in G:\MyData\MyMor\MyMorApi\MyMorApi\Service\AuthService.cs:line 80

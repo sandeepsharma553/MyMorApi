@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyMorApi.DBModel;
 using MyMorApi.Interface;
@@ -21,6 +22,20 @@ namespace MyMorApi.Controllers
         public async Task<IActionResult> Login(LoginModel login)
         {
             var result = await _service.Login(login);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+        [HttpPost]
+        [Route("VerifyEmail")]
+        public async Task<IActionResult> VerifyEmail(UserModel model)
+        {
+            var result = await _service.VerifyEmail(model);
             if (result != null)
             {
                 return Ok(result);

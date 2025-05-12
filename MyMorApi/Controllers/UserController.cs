@@ -30,5 +30,19 @@ namespace MyMorApi.Controllers
                 return BadRequest(result);
             }
         }
+        [HttpPost]
+        [Route("UpdateUser")]
+        public async Task<IActionResult> UpdateUser(UserModel model)
+        {
+            var result = await _service.UpdateUser(model);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+        }
     }
 }
